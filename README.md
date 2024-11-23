@@ -1,4 +1,4 @@
-## A Magisk module for changing audio samplerates at the system-wide mixer for the best Hi-Fi experience
+## A Magisk module changing audio samplerates at the system-wide mixer for the best Hi-Fi experience
 
 This module has been developed for casual music lovers to be able to experience the essence of my root script ["USB SampleRate Changer"](https://github.com/yzyhk904/USB_SampleRate_Changer) by the automation of Magisk.
 

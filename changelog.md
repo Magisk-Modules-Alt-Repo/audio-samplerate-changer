@@ -1,5 +1,9 @@
 ## Change logs
 
+# v1.1
+* Moved to Magisk-Module-Alt-Repo
+* Tuned for Kernel 5.x and 6.x
+
 # v1.0.3
 * Fixed to adjust volume curve table links in an audio policy configuration file dynamically for avoiding miss-linking
 

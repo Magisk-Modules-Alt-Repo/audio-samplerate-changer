@@ -1,6 +1,6 @@
 ## Change logs
 
-# v1.1
+# v1.1.0
 * Moved to Magisk-Module-Alt-Repo
 * Tuned for Kernel 5.x and 6.x
 

@@ -1608,7 +1608,7 @@ function reduceIoJitter()
                                 echo '37' >"/sys/block/$i/queue/iosched/async_depth"
                             fi
                             if [ -w "/sys/block/$i/queue/iosched/prio_aging_expire" ]; then
-                                echo '6903156' >"/sys/block/$i/queue/iosched/prio_aging_expire"
+                                echo '6903164' >"/sys/block/$i/queue/iosched/prio_aging_expire"
                             fi
                         fi
                         

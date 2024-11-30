@@ -1,5 +1,9 @@
 ## Change logs
 
+# v1.1.1
+* Tuned I/O scheduler tunables for Kernel 5.x and 6.x
+* Added a workaround for a DRC inverted bug of POCO F6 crDroid 14.0 (Nov. 27, 2024 and later) ROM's
+
 # v1.1.0
 * Moved to Magisk-Module-Alt-Repo
 * Tuned for Kernel 5.x and 6.x

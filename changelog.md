@@ -1,7 +1,7 @@
 ## Change logs
 
 # v1.1.2
-* Added an exception for Asius Zenfone 9 to change its Bluetooth HAL form "bluetooth"  to "bluetooth_qti"
+* Added an exception for Asus Zenfone 9 to change its Bluetooth HAL form "bluetooth"  to "bluetooth_qti"
 
 # v1.1.1
 * Tuned I/O scheduler tunables for Kernel 5.x and 6.x

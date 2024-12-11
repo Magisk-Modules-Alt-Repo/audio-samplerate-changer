@@ -44,13 +44,13 @@ if [ \( -e "${MODDIR%/*/*}/modules/resampling-for-cheapies"  -a  ! -e "${MODDIR%
     resetprop ro.audio.resampler.psd.halflength 520
     
     #  If you feel your LDAC earphones or "cheapie" DAC wouldn't become to sound well or loses mellowness at all, 
-    #  try replacing "85" (below)  with "86" or "87" for appropriately cutting off ultrasonic noise causing intermodulation
+    #  try replacing "85" (below)  with "84", "86" or "87" for appropriately cutting off ultrasonic noise causing intermodulation
     #
     resetprop ro.audio.resampler.psd.cutoff_percent 85
     
     #  Uncomment the following resetprop lines if you intend to replay only 44.1 kHz & 16 and 24 bit tracks; 
     #  If you feel your LDAC earphones or "cheapie" DAC wouldn't become to sound well or loses mellowness at all, 
-    #  try replacing "93" (below)  with "94" or "95"  for appropriately cutting off ultrasonic noise causing intermodulation
+    #  try replacing "93" (below)  with "92", "94" or "95"  for appropriately cutting off ultrasonic noise causing intermodulation
     #
     #resetprop ro.audio.resampler.psd.stopband 179
     #resetprop ro.audio.resampler.psd.cutoff_percent 93

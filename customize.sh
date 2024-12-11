@@ -67,7 +67,7 @@ case "`getprop ro.board.platform`" in
         ;;
     "pineapple" )
         # POCO F6 cannot output AOSP "bluetooth" driver, but "bluetooth_qti" driver can except its offload driver
-        if [ "$BT_module" = "bluetooth" ]; then
+        if [ -e "/vendor/lib64/hw/audio.bluetooth_qti.default.so" ]; then
             BT_module="bluetooth_qti"
         fi
         # Workaround for a DRC inverted bug of POCO F6 crDroid 14.0 (Nov. 27, 2024 and later) ROM's
@@ -80,6 +80,16 @@ case "`getprop ro.board.platform`" in
         SampleRatePrimary="48000"
         ;;
     * )
+        case "`getprop ro.product.board`" in
+             " taro" )
+                # for Asus Zenfone 9
+                if [ -e "/vendor/lib64/hw/audio.bluetooth_qti.default.so" ]; then
+                    BT_module="bluetooth_qti"
+                fi
+                ;;
+             * )
+                ;;
+        esac
         ;;
 esac
 

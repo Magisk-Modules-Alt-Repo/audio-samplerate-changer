@@ -2,6 +2,7 @@
 
 # v1.1.2
 * Added an exception for Asus Zenfone 9 to change its Bluetooth HAL form "bluetooth"  to "bluetooth_qti"
+* Fixed a typo " taro" with "taro"
 
 # v1.1.1
 * Tuned I/O scheduler tunables for Kernel 5.x and 6.x

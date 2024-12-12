@@ -81,7 +81,7 @@ case "`getprop ro.board.platform`" in
         ;;
     * )
         case "`getprop ro.product.board`" in
-             " taro" )
+             "taro" )
                 # for Asus Zenfone 9
                 if [ -e "/vendor/lib64/hw/audio.bluetooth_qti.default.so" ]; then
                     BT_module="bluetooth_qti"

@@ -1,5 +1,8 @@
 ## Change logs
 
+# v1.1.3
+* Added a workaround for a DRC inverted bug of Pixel 3 LineageOS 22.1 ROM's
+
 # v1.1.2
 * Added an exception for Asus Zenfone 9 to change its Bluetooth HAL form "bluetooth"  to "bluetooth_qti"
 * Fixed a typo " taro" with "taro"

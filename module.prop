@@ -1,6 +1,6 @@
 id=audio-samplerate-changer
 name=Audio samplerate changer
-version=v1.1.2
-versionCode=1102
+version=v1.1.3
+versionCode=1103
 author=zyhk
 description=A Magisk module changing audio samplerates at the system-wide mixer for the best Hi-Fi experience.

@@ -1,8 +1,9 @@
 ## Change logs
 
 # v1.1.3
-* Added a workaround for a DRC inverted bug of Pixel 3 LineageOS 22.1 ROM's
+* Added a workaround for a DRC inverted bug of Pixel 3 LineageOS 22.1 ROM (Jan. 6, 2025)
 * Fixed not to enable DRC except for POCO F6 crDroid 10.x (Nov. 27, 2024 and later) ROM's
+* Removed a workaround for a DRC inverted bug of Pixel 3 LineageOS 22.1 ROM (Jan. 6, 2025); It was fixed since Jan. 13, 2025 ROM's
 
 # v1.1.2
 * Added an exception for Asus Zenfone 9 to change its Bluetooth HAL form "bluetooth"  to "bluetooth_qti"

@@ -88,10 +88,6 @@ case "`getprop ro.board.platform`" in
                 fi
                 ;;
             "blueline" )
-                # Workaround for a DRC inverted bug of Pixel 3 LineageOS 22.1
-                if [ "`getprop ro.lineage.build.version`" = "22.1" ]; then
-                    DRC_enabled="true"
-                fi
                 ;;
              * )
                 ;;

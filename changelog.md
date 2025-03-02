@@ -1,5 +1,9 @@
 ## Change logs
 
+# v1.1.4
+* Fixed Wired Headset Mic to be enabled
+* Tuned POCO F6 for the ISIS kernel
+
 # v1.1.3
 * Added a workaround for a DRC inverted bug of Pixel 3 LineageOS 22.1 ROM (Jan. 6, 2025)
 * Fixed not to enable DRC except for POCO F6 crDroid 10.x (Nov. 27, 2024 and later) ROM's

@@ -71,7 +71,7 @@ case "`getprop ro.board.platform`" in
             BT_module="bluetooth_qti"
         fi
         # Workaround for a DRC inverted bug of POCO F6 crDroid 14.0 (Nov. 27, 2024 and later) ROM's
-        if [ "`getprop ro.crdroid.device`" = "peridot"  -a  "`getprop ro.build.version.release`" = "14"  -a  "`getprop ro.system_ext.build.date.utc`" -ge "1732697965" ]; then
+        if [ "`getprop ro.crdroid.device`" = "peridot"  -a  "`getprop ro.build.version.release`" = "14"  -a  "`getprop ro.build.date.utc`" -ge "1732697965" ]; then
             DRC_enabled="true"
         fi
         ;;
@@ -88,6 +88,10 @@ case "`getprop ro.board.platform`" in
                 fi
                 ;;
             "blueline" )
+                # Workaround for a DRC inverted bug of Pixel 3 LineageOS 22.2 (Apr. 14, 2025 and later) ROM's
+                 if [ "`getprop ro.build.version.release`" = "15"  -a  "`getprop ro.build.date.utc`" -ge "1744623155" ]; then
+                    DRC_enabled="true"
+                fi
                 ;;
              * )
                 ;;

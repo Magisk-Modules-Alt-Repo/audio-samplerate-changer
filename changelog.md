@@ -1,9 +1,13 @@
 ## Change logs
 
+# v1.1.5
+* Added a workaround for a DRC inverted bug of Pixel 3 LineageOS 22.2 ROMs
+* Tuned for POCO F3 not to stutter when using over 192 kHz sample rate USB DACs
+
 # v1.1.4
 * Fixed Wired Headset Mic to be enabled
-* Tuned POCO F6 for the ISIS kernel
-* Tuned POCO F6 for the stock kernel again
+* Tuned for POCO F6 (optimized for the ISIS kernel)
+* Tuned for POCO F6 (optimized for the stock kernel, but not for the ISIS kernel)
 
 # v1.1.3
 * Added a workaround for a DRC inverted bug of Pixel 3 LineageOS 22.1 ROM (Jan. 6, 2025)

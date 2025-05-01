@@ -54,7 +54,7 @@ fi
 case "`getprop ro.board.platform`" in
     gs* | "zuma" )
         # A conflicting guard for "Hifi maximizer" on Tensor devices
-        if [ -e "${MODDIR%/*/*}/modules/hifi-maximizer-mod" ]; then
+        if [ -e "${MODPATH%/*/*}/modules/hifi-maximizer-mod" ]; then
             abort '  ***
   Aborted: detecting Hifi maximizer already containing this feature on Tensor devices
   ***'

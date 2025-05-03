@@ -70,8 +70,12 @@ case "`getprop ro.board.platform`" in
         if [ -e "/vendor/lib64/hw/audio.bluetooth_qti.default.so" ]; then
             BT_module="bluetooth_qti"
         fi
-        # Workaround for a DRC inverted bug of POCO F6 crDroid 14.0 (Nov. 27, 2024 and later) ROM's
-        if [ "`getprop ro.crdroid.device`" = "peridot"  -a  "`getprop ro.build.version.release`" = "14"  -a  "`getprop ro.build.date.utc`" -ge "1732697965" ]; then
+        # Workaround for a DRC inverted bug of POCO F6 crDroid 10.x (Nov. 27, 2024 and later) ROM's and crDroid 11.4 or later
+        if [ "`getprop ro.crdroid.device`" = "peridot"  -a  "`getprop ro.build.version.release`" = "14"  \
+                    -a  "`getprop ro.build.date.utc`" -ge "1732697965" ]; then
+            DRC_enabled="true"
+        elif [ "`getprop ro.crdroid.device`" = "peridot"  -a  "`getprop ro.build.version.release`" = "15"  \
+                    -a  "`getprop ro.build.date.utc`" -ge "1746174604" ]; then
             DRC_enabled="true"
         fi
         ;;

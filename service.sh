@@ -44,23 +44,23 @@ if [ \( -e "${MODDIR%/*/*}/modules/resampling-for-cheapies"  -a  ! -e "${MODDIR%
     resetprop ro.audio.resampler.psd.halflength 520
     
     #  If you feel your LDAC earphones or "cheapie" DAC wouldn't become to sound well or loses mellowness at all, 
-    #  try replacing "85" (below)  with "84", "86" or "87" for appropriately cutting off ultrasonic noise causing intermodulation
+    #  try replacing "84" (below)  with "83", "85" or "86" for appropriately cutting off ultrasonic noise causing intermodulation
     #
-    resetprop ro.audio.resampler.psd.cutoff_percent 85
+    resetprop ro.audio.resampler.psd.cutoff_percent 84
     
     #  Uncomment the following resetprop lines if you intend to replay only 44.1 kHz & 16 and 24 bit tracks; 
     #  If you feel your LDAC earphones or "cheapie" DAC wouldn't become to sound well or loses mellowness at all, 
-    #  try replacing "93" (below)  with "92", "94" or "95"  for appropriately cutting off ultrasonic noise causing intermodulation
+    #  try replacing "92" (below)  with "91", "93" or "94"  for appropriately cutting off ultrasonic noise causing intermodulation
     #
     #resetprop ro.audio.resampler.psd.stopband 179
-    #resetprop ro.audio.resampler.psd.cutoff_percent 93
+    #resetprop ro.audio.resampler.psd.cutoff_percent 92
 
     #  Uncomment the following resetprop lines if you intend to replay only 96 kHz & 24 bit Hires. tracks.
     #  If you feel your LDAC earphones or "cheapie" DAC wouldn't become to sound well, 
-    #  try replacing "43" (below)  with "44" for appropriately cutting off ultrasonic noise causing intermodulation
+    #  try replacing "42" (below)  with "43" for appropriately cutting off ultrasonic noise causing intermodulation
     #
     #resetprop ro.audio.resampler.psd.enable_at_samplerate 96000
-    #resetprop ro.audio.resampler.psd.cutoff_percent 43
+    #resetprop ro.audio.resampler.psd.cutoff_percent 42
 
     reloadAudioserver
 }

@@ -1,10 +1,13 @@
 ## Change logs
 
+# v1.1.6
+* Added a workaround for a DRC inverted bug of POCO F6 crDroid 11.4 or later ROMs
+* Changed an error message for no Magisk mirrors
+
 # v1.1.5
 * Added a workaround for a DRC inverted bug of Pixel 3 LineageOS 22.2 ROMs
 * Tuned for POCO F3 not to stutter when using over 192 kHz sample rate USB DACs
 * Fixed to abort if Hifi maximizer has been installed on Tensor devices
-* Added a workaround for a DRC inverted bug of POCO F6 crDroid 11.4 or later ROMs
 
 # v1.1.4
 * Fixed Wired Headset Mic to be enabled

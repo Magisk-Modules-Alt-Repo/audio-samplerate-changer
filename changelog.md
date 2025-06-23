@@ -1,5 +1,9 @@
 ## Change logs
 
+# v1.1.7
+* Removed the workaround for a DRC inverted bug of POCO F6 crDroid 11.4 and 11.5 because fixed on crDroid 11.6
+* Tuned I/O scheduler tunables for POCO F6 (crDroid 11.6)
+
 # v1.1.6
 * Added a workaround for a DRC inverted bug of POCO F6 crDroid 11.4 or later ROMs
 * Changed an error message for no Magisk mirrors

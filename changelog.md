@@ -1,5 +1,9 @@
 ## Change logs
 
+# v1.1.8
+* Enabled a USB HAL driver of Pixel 6's that can output at greater than 192 kHz because its bug has been fixed since Dec. 2025
+* Tuned I/O scheduler tunables for Pixel 6's
+
 # v1.1.7
 * Removed the workaround for a DRC inverted bug of POCO F6 crDroid 11.4 and 11.5 because fixed on crDroid 11.6
 * Tuned I/O scheduler tunables for POCO F6 (crDroid 11.6)

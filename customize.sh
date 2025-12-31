@@ -64,7 +64,10 @@ case "`getprop ro.board.platform`" in
         # Tensor's max. samplerate for internal speakers
         SampleRatePrimary="48000"
         USB_module="usbv2"
-        templateFile="$MODPATH/templates/offload_hifi_playback_template.xml"
+        # A USB HAL driver bug has been fixed since Dec. 2025
+        if [ "`getprop ro.build.date.utc`" -lt "1762519080" ]; then
+            templateFile="$MODPATH/templates/offload_hifi_playback_template.xml"
+        fi
         ;;
     "pineapple" )
         # POCO F6 cannot output AOSP "bluetooth" driver, but "bluetooth_qti" driver can except its offload driver

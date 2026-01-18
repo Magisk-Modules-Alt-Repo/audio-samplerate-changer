@@ -1472,28 +1472,28 @@ function getSchedulerValues()
                     "boost" )
                         case "`getSocModelName`" in
                             sm[6-8]* )
-                                echo "137 0 36 516 0"
+                                echo "138 0 36 516 0"
                                 ;;
                             sdm8[5-9]* | sdm9* )
                                 echo "138 0 36 516 0"
                                 ;;
                             gs* )
-                                echo "137 0 36 516 0"
+                                echo "138 0 36 516 0"
                                 ;;
                             sdm8* )
-                                echo "136 0 36 516 0"
+                                echo "138 0 36 516 0"
                                 ;;
                             sdm* | msm* | sd* | exynos* )
                                 echo "133 0 38 517 0"
                                 ;;
                             mt68* )
-                                echo "138 0 36 516 0"
+                                echo "139 0 36 516 0"
                                 ;;
                             mt67[7-9]? )
-                                echo "138 0 36 516 0"
+                                echo "139 0 36 516 0"
                                 ;;
                             * )
-                                echo "136 0 36 516 0"
+                                echo "139 0 36 516 0"
                                 ;;
                         esac
                         ;;

@@ -156,50 +156,7 @@ case "$configXML" in
         ;;
 esac
 
-# Note: Don't use "${MAGISKTMP}/mirror/system/vendor/*" instaed of "${MAGISKTMP}/mirror/vendor/*".
-# In some cases, the former may link to overlaied "/system/vendor" by Magisk itself (not mirrored original one).
-
-#   "max" below this line means "up to 768kHz unlock";
-#    for "up to 384kHz unlock", replace "max" with "full" below this line;
-#    for "up to 192kHz unlock", replace "full" with "default" below this line.
-
-for ld in "lib" "lib64"; do
-    d="/system/vendor/${ld}"
-    for lname in "libalsautils.so" "libalsautilsv2.so"; do
-        if [ -r "${MAGISKTMP}/mirror/vendor/${ld}/${lname}"  -a  -r "${d}/${lname}" ]; then
-            mkdir -p "${MODPATH}${d}"
-            patchClearLock "${MAGISKTMP}/mirror/vendor/${ld}/${lname}" "${MODPATH}${d}/${lname}" "max"
-
-            chmod 644 "${MODPATH}${d}/${lname}"
-            chcon u:object_r:vendor_file:s0 "${MODPATH}${d}/${lname}"
-            chown root:root "${MODPATH}${d}/${lname}"
-            chmod -R a+rX "${MODPATH}${d}"
-            if [ -z "${REPLACEFILES}" ]; then
-                REPLACEFILES="${d}/${lname}"
-            else
-                REPLACEFILES="${REPLACEFILES} ${d}/${lname}"
-            fi
-        fi
-    done
-    
-    for lname in "audio_usb_aoc.so"; do
-        if [ -r "${MAGISKTMP}/mirror/vendor/${ld}/${lname}"  -a  -r "${d}/${lname}" ]; then
-            mkdir -p "${MODPATH}${d}"
-            patchClearTensorOffloadLock "${MAGISKTMP}/mirror/vendor/${ld}/${lname}" "${MODPATH}${d}/${lname}"
-
-            chmod 644 "${MODPATH}${d}/${lname}"
-            chcon u:object_r:vendor_file:s0 "${MODPATH}${d}/${lname}"
-            chown root:root "${MODPATH}${d}/${lname}"
-            chmod -R a+rX "${MODPATH}${d}"
-            if [ -z "${REPLACEFILES}" ]; then
-                REPLACEFILES="${d}/${lname}"
-            else
-                REPLACEFILES="${REPLACEFILES} ${d}/${lname}"
-            fi
-        fi
-    done
-    
-done
+makeUnlockedLibraries
 
 fname="/system/vendor/etc/audio_platform_configuration.xml"
 if [ -r "$fname" ]; then

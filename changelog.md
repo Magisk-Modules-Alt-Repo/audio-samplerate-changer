@@ -1,5 +1,8 @@
 ## Change logs
 
+# v1.1.9
+* A17 beta3 of Pixel 6's have a bug that cannot detect any appropriate sample rate and depth of a DAC, but they can or may work for DAC's having a XMOS digital interface chip if specifying any sample rate and depth
+
 # v1.1.8
 * Enabled a USB HAL driver of Pixel 6's that can output at greater than 192 kHz because its bug has been fixed since Dec. 2025
 * Tuned I/O scheduler tunables for Pixel 6's

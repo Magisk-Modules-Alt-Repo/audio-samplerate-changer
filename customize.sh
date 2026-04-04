@@ -65,7 +65,12 @@ case "`getprop ro.board.platform`" in
         SampleRatePrimary="48000"
         USB_module="usbv2"
         # A USB HAL driver bug has been fixed since Dec. 2025
-        if [ "`getprop ro.build.date.utc`" -lt "1762519080" ]; then
+        if [ "`getprop ro.build.version.codename`" = "CinnamonBun" ]; then
+            # A17 beta3 of Pixel 6's have a bug that cannot detect any appropriate sample rate and depth of a DAC
+            # But they can or may work for DAC's having a XMOS digital interface chip if specifying any sample rate and depth
+            templateFile="$MODPATH/templates/bypass_offload_safer_template.xml"
+            SampleRatePrimary="768000"
+        elif [ "`getprop ro.build.date.utc`" -lt "1762519080" ]; then
             templateFile="$MODPATH/templates/offload_hifi_playback_template.xml"
         fi
         ;;

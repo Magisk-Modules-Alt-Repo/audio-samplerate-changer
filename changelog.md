@@ -2,6 +2,7 @@
 
 # v1.1.10
 * Tuned I/O scheduling parameters for POCO F6, POCO F3, Motorola G54's and Pixel 6's 
+* Added a USB DAC workaround for A17 (removed for betas) of Pixel 6's for greater than 192 kHz samplerates; they have a bug that cannot detect any appropriate sample rate and depth of a USB DAC, but they can or may work for USB DAC's having a XMOS digital interface chip if specifying any sample rate and depth
 
 # v1.1.9
 * Added a USB DAC workaround for A17 beta3 of Pixel 6's for greater than 192 kHz samplerates; they have a bug that cannot detect any appropriate sample rate and depth of a USB DAC, but they can or may work for USB DAC's having a XMOS digital interface chip if specifying any sample rate and depth
